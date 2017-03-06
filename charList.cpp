@@ -122,7 +122,7 @@ bool CharList::insertNode(char value) {
       tmp = head;
       prev = nullptr;
       while (tmp) {
-         if (tmp->value >= value) {
+         if (tmp->value <= value) {
             // insert the value before the node tmp and after the node prev
             if (prev == nullptr) {
                newNode->next = head;
@@ -218,4 +218,5 @@ CharList::~CharList()
       // Position nodePtr at the next node.
       nodePtr = nextNode;
    }
+
 }
